@@ -3,8 +3,8 @@ let roundResult;
 let playerPointsCounter = 0;
 let computerPointsCounter = 0;
 
-function getComputerChoice() {  //This function select a random choice for play
-    let choiceArray = [
+function getComputerChoice() {
+    const choiceArray = [
         'rock',
         'paper',
         'scissors'
@@ -13,8 +13,9 @@ function getComputerChoice() {  //This function select a random choice for play
     var randomChoice = choiceArray[randomSelect];
     return randomChoice;
 }
-function playRound(playerSelection, computerSelection) { //This function is responsible for managing the rounds of the game
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
+    //this conditionals check the round results for edit the roundResult var
     if (playerSelection === computerSelection) {
         roundResult ='It\'s a tie';
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
@@ -43,7 +44,7 @@ function playRound(playerSelection, computerSelection) { //This function is resp
 
 game();
 
-function game() { //This function is responsible for to play a best-of-five game
+function game() { //This function is responsible for to play a best-of-five game and print in the console the result of the round and the result of the game
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Type your choice to play', '' )
         const computerSelection = getComputerChoice();
