@@ -55,13 +55,10 @@ function game() { //This function is responsible for to play a best-of-five game
         } else if (computerPointsCounter === 3) {
             console.log('I\'m sorry, you loose :(');
             break;
-    //Else if the game ends and the player have more points than computer then player wins
         } else if (i === 4 && playerPointsCounter > computerPointsCounter) {
             console.log('Congratulations! You win!');
-    //Else if the game ends and the computer have more points than player then computer wins
         } else if (i === 4 && playerPointsCounter < computerPointsCounter) {
             console.log('I\'m sorry, you loose :(');
-    //Else if the game ends and the player have the same points than the player then it's a tie
         } else if (i === 4 && playerPointsCounter === computerPointsCounter) {
             console.log('Nobody wins, it\'s a tie!');
         }
