@@ -1,3 +1,7 @@
+const allButtons = document.querySelectorAll('.button-container')
+
+//Add a conditional that check the player's choice
+//Return the player's choice
 
 let roundResult;
 let playerPointsCounter = 0;
@@ -42,14 +46,10 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-game();
+//game();
 
-function game() { //This function is responsible for to play a best-of-five game and print in the console the result of the round and the result of the game
+/*function game() { //This function is responsible for to play a best-of-five game and print in the console the result of the round and the result of the game
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt('Type your choice to play', '' )
-        const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
-        console.log(roundResult);
         if (playerPointsCounter === 3) {
             console.log('Congratulations! You win!');
             break;
@@ -64,4 +64,12 @@ function game() { //This function is responsible for to play a best-of-five game
             console.log('Nobody wins, it\'s a tie!');
         }
     }
-}
+} */
+
+allButtons.forEach((button) => {
+button.addEventListener('click', function(ev) {
+    const computerSelection = getComputerChoice();
+    playRound(ev.target.value, computerSelection);
+    console.log(roundResult);
+})
+})
