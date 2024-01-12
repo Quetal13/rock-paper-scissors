@@ -4,13 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock - Paper - Scissors</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="button-container">
-        <button value="rock">rock</button>
-        <button value="paper">paper</button>
-        <button value="scissors">scissors</button>
+<header>
+    <span>Rock, Paper, Scissors</span>
+</header>
+<main>
+    <div class="game-container">
+        <div class="top-container">
+            <div class="header">
+                <div class="round-counter">
+                    <span>Rounds:</span>
+                </div>
+            </div>
+            <div class="score-container">
+                <div class="player-score"><span>Player score: 0</span></div>
+                <div class="computer-score"><span>Computer score: 0</span></div>
+            </div>
+            <div class="choose">
+                <span>Choose One to play!</span>
+            </div>
+        </div>
+        <div class="button-container">
+            <button value="rock">rock</button>
+            <button value="paper">paper</button>
+            <button value="scissors">scissors</button>
+        </div>
+        <div class="bottom-container">
+            <div class="round"> <span>Result:</span></div>
+            <div class="winner"><span>Winner:</span></div>
+            <div class="restart">
+                <button id="restart">Restart game</button>
+            </div>
+        </div>
     </div>
+</main>
+<footer>
+    Copyright © Quetal13 2024
+</footer>
 
     <script src="./js/script.js"></script>
 </body>
