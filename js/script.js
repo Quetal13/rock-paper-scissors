@@ -1,4 +1,4 @@
-const allButtons = document.querySelectorAll('.button-container')
+const allButtons = document.querySelectorAll('.button-container button')
 const restartButton = document.querySelector('#restart');
 const round = document.querySelector('.round-counter');
 const roundResult = document.querySelector('.round');
@@ -21,7 +21,7 @@ function getComputerChoice() {
     return randomChoice;
 }
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+    playerSelection = playerSelection;
     //this conditionals check the round results for edit the roundResult var
     if (playerSelection === computerSelection) {
         roundResult.textContent ='Result: It\'s a tie';
@@ -55,17 +55,27 @@ function playRound(playerSelection, computerSelection) {
 
 function game() { //This function is responsible for to play a best-of-five game and print in the console the result of the round and the result of the game
         if (playerPointsCounter === 3) {
-            winner.textContent = 'Winner: Congratulations! You win!';
+            winner.textContent = 'Congratulations! You win!';
+            winner.style.color = 'RGBA(5,255,80,0.72)';
+            winner.style.animation = 'zoomIn 2s'
             roundCounter = 5;
         } else if (computerPointsCounter === 3) {
             winner.textContent = 'Winner: I\'m sorry, you loose :(';
+            winner.style.color = 'RGBA(255,50,80,0.81)';
+            winner.style.animation = 'zoomIn 1s'
             roundCounter = 5;
         } else if (roundCounter === 5 && playerPointsCounter > computerPointsCounter) {
-            winner.textContent = 'Winner: Congratulations! You win!';
+            winner.textContent = 'Congratulations! You win!';
+            winner.style.color = 'RGBA(5,255,80,0.72)';
+            winner.style.animation = 'zoomIn 2s'
         } else if (roundCounter === 5 && playerPointsCounter < computerPointsCounter) {
             winner.textContent = 'Winner: I\'m sorry, you loose :(';
+            winner.style.color = 'RGBA(255,50,80,0.81)';
+            winner.style.animation = 'zoomIn 1s'
         } else if (roundCounter === 5 && playerPointsCounter === computerPointsCounter) {
             winner.textContent = 'Winner: Nobody wins, it\'s a tie!';
+            winner.style.color = 'RGBA(0,0,0,0.5)';
+            winner.style.animation = 'zoomIn 1s'
         }
 }
 
@@ -73,7 +83,7 @@ allButtons.forEach((button) => {
 button.addEventListener('click', function(ev) {
     const computerSelection = getComputerChoice();
     if (roundCounter < 5) {
-        playRound(ev.target.value, computerSelection);
+        playRound(ev.currentTarget.value, computerSelection);
         roundCounter++
         round.textContent = `Rounds: ` + roundCounter;
         game();
@@ -91,4 +101,6 @@ restartButton.addEventListener('click', function() {
   computerPoints.textContent = 'Computer score: ' + computerPointsCounter;
   roundResult.textContent = "Result:";
   winner.textContent = 'Winner:';
+  winner.style.color = 'white';
+  winner.style.animation = '';
 })
