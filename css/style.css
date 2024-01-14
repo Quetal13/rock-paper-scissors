@@ -179,23 +179,28 @@ a:hover {
 /* Responsive design for mobile */
 
 @media screen and (max-width: 600px) {
+    body {
+        max-height: 100vh;
+    }
+
     header {
-        font-size: 30px;
+        font-size: 8vw;
+        max-height: 17vh;
     }
     
     .header {
-        font-size: 20px;
+        font-size: 5.5vw;
     }
 
     .choose {
-        font-size: 20px;
+        font-size: 5.5vw;
         margin-top: 10px;
         margin-bottom: 20px;
     }
 
     .game-container {
         max-width: 80vw;
-        font-size: 20px;
+        font-size: 5.5vw;
         text-align: center;
         margin: 0;
     }
@@ -213,11 +218,11 @@ a:hover {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 5.5vw;
     }
 
     .button-container img {
-        max-width: 45px;
+        max-width: 12.5vw;
     }
     
     .bottom-container {
@@ -226,10 +231,10 @@ a:hover {
     }
     
     .restart button {
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     footer {
-        font-size: 15px;
+        font-size: 4vw;
     }
 }
