@@ -41,7 +41,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 3vw;
 }
 
 a {
@@ -62,7 +62,7 @@ a:hover {
     width: 800px;
     min-height: 70vh;
     max-height: 70vh;
-    font-size: 25px;
+    font-size: 1.5vw;
     font-weight: 600;
     box-shadow: 0px 1px 14px 4px rgba(0,0,0,0.77);
     -webkit-box-shadow: 0px 1px 14px 4px rgba(0,0,0,0.77);
@@ -72,16 +72,16 @@ a:hover {
 .header {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    font-size: 30px;
+    margin-bottom: 0.1vw;
+    margin-top: 0.1vw;
+    font-size: 2vw;
     font-weight: 800;
 }
 
 .score-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     margin-left: 15px;
     margin-right: 15px;
     font-weight: 700;
@@ -98,16 +98,15 @@ a:hover {
 .choose {
     display: flex;
     justify-content: center;
-    font-size: 30px;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    font-size: 2vw;
+    margin-top: 0.5vw;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 20vh;
     gap: 80px;
 }
 
@@ -129,7 +128,7 @@ a:hover {
 }
 
 .button-container img {
-    width: 70px;
+    max-width: 4vw;
     height: auto;
 }
 
@@ -173,68 +172,5 @@ a:hover {
     }
     100% {
         transform: scale(1); /* Return to normal size */
-    }
-}
-
-/* Responsive design for mobile */
-
-@media screen and (max-width: 600px) {
-    body {
-        max-height: 100vh;
-    }
-
-    header {
-        font-size: 8vw;
-        max-height: 17vh;
-    }
-    
-    .header {
-        font-size: 5.5vw;
-    }
-
-    .choose {
-        font-size: 5.5vw;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .game-container {
-        max-width: 80vw;
-        font-size: 5.5vw;
-        text-align: center;
-        margin: 0;
-    }
-
-    .score-container {
-        flex-direction: column;
-        gap: 8px;
-        align-items: center;
-        margin: 0;
-    }
-
-    .button-container {
-        min-height: 250px;
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 5.5vw;
-    }
-
-    .button-container img {
-        max-width: 12.5vw;
-    }
-    
-    .bottom-container {
-        margin-top: 20px;
-        gap: 15px;
-    }
-    
-    .restart button {
-        font-size: 4vw;
-    }
-
-    footer {
-        font-size: 4vw;
     }
 }
